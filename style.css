@@ -4,18 +4,26 @@
     font-family: 'Josefin Sans', sans-serif;
     box-sizing: border-box;
 }
+header{
+    background-color: #a7a2a2;
+}
 .hero{
     height: 100vh;
     width: 100%;
-    background-image: url(assets/desktop.jpg);
+    background-image: url(assets/welcome\ sign.jpg);
+    background-size: cover;
 }
+/* ----------Navbar----------- */
 nav{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-top: 45px;
-    padding-left: 8%;
-    padding-right: 8%;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+img{
+    height: auto;
+    width: 190px;
+    border-radius: 10px;
 }
 .logo{
     color: white;
@@ -24,7 +32,7 @@ nav{
     cursor: pointer;
 }
 span{
-    color: #f9004d;
+    color: #f90036;
 }
 nav ul li{
     list-style-type: none;
@@ -38,11 +46,11 @@ nav ul li a{
     text-transform: capitalize;
 }
 nav ul li a:hover{
-    color: #f9004d;
+    color: #f90036;
     transition: .4s;
 }
 .btn{
-    background-color: #f9004d;
+    background-color: #f90036;
     color: white;
     text-decoration: none;
     border: 2px solid transparent;
@@ -60,6 +68,7 @@ nav ul li a:hover{
     left: 8%;
     transform: translateY(-50%);
 }
+/* ----------Hero Section----------- */
 h1{
     color: white;
     margin: 20px 0px 20px;
@@ -86,7 +95,7 @@ h4{
     display: inline-block;
     width: 100%;
     padding: 14px 130px 14px 15px;
-    border: 2px solid #f9004d;
+    border: 2px solid #f90036;
     outline: none;
     border-radius: 30px;
 }
@@ -97,7 +106,7 @@ h4{
     border: none;
     padding: 10px 30px;
     border-radius: 30px;
-    background-color: #f9004d;
+    background-color: #f90036;
     color: white;
     box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
     top: 6px;
@@ -145,7 +154,7 @@ h4{
     margin-bottom: 45px;
 }
 button{
-    background-color: #f9004d;
+    background-color: #f90036;
     color: white;
     text-decoration: none;
     border: 2px solid transparent;
@@ -156,12 +165,12 @@ button{
 }
 button:hover{
     background-color: transparent;
-    border: 2px solid #f9004d;
+    border: 2px solid #f90036;
     cursor: pointer;
 }
 
-/* --------------service-------------- */
-.service{
+/* --------------My Work-------------- */
+.my-work{
     background: #101010;
     width: 100%;
     padding: 100px 0px;
@@ -169,16 +178,23 @@ button:hover{
 .title h2{
     color: white;
     font-size: 75px;
-    width: 1130px;
+    width: 300px;
     margin: 30px auto;
     text-align: center;
 }
 .box{
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    min-height: 400px;
+    align-items: stretch;
+    flex: 1 2 2;
+    flex-wrap: wrap;
+    /* min-height: 400px; */
+    
 }
+/* .one{
+    
+} */
 .card{
     height: 365px;
     width: 335px;
@@ -189,6 +205,7 @@ button:hover{
     position: relative;
     overflow: hidden;
     text-align: center;
+    border: 2px solid #2e2e2e;
 }
 .card i{
     font-size: 50px;
@@ -196,7 +213,12 @@ button:hover{
     text-align: center;
     margin: 25px 0px;
     margin: 30px auto;
-    color: #f9004d;
+    color: #f90036;
+}
+.card img{
+    max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
 }
 h5{
     color: white;
@@ -210,7 +232,7 @@ h5{
     margin-bottom: 25px;
 }
 .card .button{
-    background-color: #f9004d;
+    background-color: #f90036;
     color: white;
     text-decoration: none;
     border: 2px solid transparent;
@@ -221,12 +243,12 @@ h5{
 }
 .card .button:hover{
     background-color: transparent;
-    border: 2px solid #f9004d;
+    border: 2px solid #f90036;
     cursor: pointer;
 }
 
 /* --------------contact form---------------- */
-.contact-form{ 
+/* .contact-form{ 
     width: 100%;
     height: 290px;
     background: #191919;
@@ -234,15 +256,15 @@ h5{
     align-items: center;
     flex-direction: column;
     justify-content: center;
-}
-.contact-form p{
+} */
+/* .contact-form p{
     color: white;
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 25px;
 }
 .contact-form .button-two{
-    background-color: #f9004d;
+    background-color: #f90036;
     color: white;
     text-decoration: none;
     border: 2px solid transparent;
@@ -253,11 +275,89 @@ h5{
 }
 .contact-form .button-two:hover{
     background-color: transparent;
-    border: 2px solid #f9004d;
+    border: 2px solid #f90036;
+    cursor: pointer;
+} */
+
+/* New contact form */
+.contact{
+    background-color:#2e2e2e;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding-left: 150px;
+    /* grid-gap: 6rem; */
+    
+}
+/*.contact-img img{
+    max-width: 100%;
+    width: 540px;
+    height: 620px;
+    border-radius: 10px;
+}*/
+.form-gif{
+    border-radius: 70px;
+    border-color: #d5cfc9;
+}
+.contact-form-page h1{
+    font-size: 80px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+span{
+    color: #f90036;
+}
+.contact-form-page p{
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 26px;
+    font-size: 1.1rem;
+    margin-bottom: 3.8rem;
+    text-shadow: #191919;
+}
+.contact-form-page form{
+    position: relative;
+}
+.contact-form-page form input,
+form textarea{
+    width: 100%;
+    padding: 17px;
+    border: none;
+    outline: none;
+    background: #191919;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    border-radius: 10px;
+}
+.contact-form-page textarea{
+    resize: none;
+    height: 200px;
+}
+.contact-form-page form
+ .button-contact{
+    display: inline-block;
+    background: #f90036;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    width: 220px;
+    transition: ease .20s;
     cursor: pointer;
 }
-
-/* ----footer---- */
+.contact-form-page form
+ .button-contact:hover{
+    border: 2px solid #f90036;
+    background: transparent;
+    transform: scale(1.1);
+}
+/* -------footer-------- */
 footer{
     position: relative;
     width: 100%;
@@ -273,4 +373,47 @@ footer p:nth-child(1){
     color: white;
     margin-bottom: 20px;
     font-weight: bold;
+}
+/* ----------Media Queries--------- */
+@media (max-width: 1440px){
+    section{
+        padding-left: 400px;
+        transition: .2s;
+    }
+    .contact-form-page h1{
+        font-size: 60px;   
+    }
+    .contact-form-page p{
+        margin-bottom: 3rem;
+    }
+}
+@media (max-width: 1024px){
+    .contact{
+        grid-gap: 2rem;
+        transition: .3s;
+    }
+}
+@media (max-width: 768px){
+    .hero{
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-rows: auto;
+    }
+    .contact{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+    /* .contact-form-page{
+    } */
+    .contact-img img{
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 30px;   
+    }
+    .my-work{
+        flex-wrap: wrap;
+    }
 }
